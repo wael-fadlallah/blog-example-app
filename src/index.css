@@ -18,7 +18,7 @@ code {
 
 html {
   font-family: sans-serif;
-  background: #ffc600;
+  background: #0f172a;
 }
 
 .App {
@@ -69,5 +69,5 @@ p {
   background: none;
   border: none;
   position: absolute;
-  right: 0px;
+  right: 15px;
 }

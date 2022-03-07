@@ -1,16 +1,9 @@
 import { useState } from "react";
 import TodoPanel from "./components/TodoPanel";
+import { TodoType } from "./Types";
 
-interface todo {
-  index?: number;
-  complete: boolean;
-  description: string;
-}
 function App() {
-  const [todolist, setTodolist] = useState<Array<todo>>([
-    { complete: false, description: "test" },
-    { complete: false, description: "test" },
-  ]);
+  const [todolist, setTodolist] = useState<Array<TodoType>>([]);
 
   const checkItem = (index: number) => {
     const todos = [...todolist];
@@ -24,7 +17,7 @@ function App() {
   const addTodo = (e: any) => {
     e.preventDefault();
 
-    const todo: todo = {
+    const todo: TodoType = {
       description: e.target.elements.todo.value,
       complete: false,
     };
@@ -34,7 +27,7 @@ function App() {
   };
 
   const deleteItem = (index: number) => {
-    setTodolist((prev) => prev.filter((todo, i) => i !== index));
+    setTodolist((prev) => prev.filter((_, i) => i !== index));
   };
 
   return (

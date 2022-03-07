@@ -1,10 +1,19 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import { TodoType } from "./../Types";
 
-const TodoPanel = ({ todolist, checkItem, deleteItem }: any) => {
+const TodoPanel = ({
+  todolist,
+  checkItem,
+  deleteItem,
+}: {
+  todolist: Array<TodoType>;
+  checkItem: (index: number, e: React.ChangeEvent<HTMLInputElement>) => void;
+  deleteItem: (index: number) => void;
+}) => {
   useEffect(() => {}, [todolist]);
   return (
     <>
-      {todolist?.map((todo: any, index: number) => (
+      {todolist?.map((todo: TodoType, index: number) => (
         <div className="item" key={index}>
           <input
             type="checkbox"
@@ -12,7 +21,7 @@ const TodoPanel = ({ todolist, checkItem, deleteItem }: any) => {
             onChange={(e) => checkItem(index, e)}
           />
           <p>{todo?.description}</p>
-          <button onClick={(e) => deleteItem(index)}>❌ </button>
+          <button onClick={() => deleteItem(index)}>❌ </button>
         </div>
       ))}
     </>
