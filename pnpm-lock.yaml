@@ -7,6 +7,7 @@ specifiers:
   '@vitejs/plugin-react': ^1.0.7
   autoprefixer: ^10.4.2
   esbuild-darwin-64: ^0.14.25
+  esbuild-linux-64: ^0.14.25
   postcss: ^8.4.7
   react: ^17.0.2
   react-dom: ^17.0.2
@@ -17,6 +18,7 @@ specifiers:
 
 dependencies:
   esbuild-darwin-64: 0.14.25
+  esbuild-linux-64: 0.14.25
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
 
@@ -721,8 +723,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: true
-    optional: true
 
   /esbuild-linux-arm/0.14.25:
     resolution: {integrity: sha512-aTLcE2VBoLydL943REcAcgnDi3bHtmULSXWLbjtBdtykRatJVSxKMjK9YlBXUZC4/YcNQfH7AxwVeQr9fNxPhw==}
