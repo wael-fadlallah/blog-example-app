@@ -24,13 +24,20 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 6.0.2
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --strict-peer-dependencies]
+            - args: [--global, install]
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
 
       - name: install modules
-        run: yarn
+        run: pnpm install
 
       - name: Run vitest
-        run: yarn run test
+        run: pnpm run test
