@@ -34,7 +34,7 @@ jobs:
       - name: Run vitest
         run: pnpm run test
   deploy:
-    # The type of runner that the job will run on
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
