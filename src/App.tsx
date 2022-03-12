@@ -4,7 +4,6 @@ import { TodoType } from "./Types";
 
 function App() {
   const [todolist, setTodolist] = useState<Array<TodoType>>([]);
-  const [dis, setDis] = useState<boolean>(false);
 
   const checkItem = (index: number) => {
     const todos = [...todolist];
@@ -31,10 +30,6 @@ function App() {
     setTodolist((prev) => prev.filter((_, i) => i !== index));
   };
 
-  function Testing() {
-    console.log("test");
-  }
-
   return (
     <div className="App">
       <div className="inbox">
@@ -52,14 +47,7 @@ function App() {
               name="todo"
               className="h-[40px] w-[80%] border-none"
             />
-            <button
-              disabled={dis}
-              onClick={() => {
-                setDis(true);
-              }}
-              className="h-[40px] w-[18%]"
-              type="submit"
-            >
+            <button className="h-[40px] w-[18%]" type="submit">
               📓 Add
             </button>
           </form>
