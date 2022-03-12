@@ -9,9 +9,9 @@ specifiers:
   '@types/react-dom': ^17.0.10
   '@types/react-test-renderer': ^17.0.1
   '@vitejs/plugin-react': ^1.0.7
+  '@wojtekmaj/enzyme-adapter-react-17': ^0.6.6
   autoprefixer: ^10.4.2
   enzyme: ^3.11.0
-  enzyme-adapter-react-16: ^1.15.6
   esbuild-darwin-64: ^0.14.25
   esbuild-linux-64: ^0.14.25
   jsdom: 19.0.0
@@ -40,9 +40,9 @@ devDependencies:
   '@types/react-dom': 17.0.13
   '@types/react-test-renderer': 17.0.1
   '@vitejs/plugin-react': 1.2.0
+  '@wojtekmaj/enzyme-adapter-react-17': 0.6.6_fae758709a8810ba97b4c03852dde4d0
   autoprefixer: 10.4.2_postcss@8.4.8
   enzyme: 3.11.0
-  enzyme-adapter-react-16: 1.15.6_fae758709a8810ba97b4c03852dde4d0
   jsdom: 19.0.0
   jsdom-global: 3.0.2_jsdom@19.0.0
   postcss: 8.4.8
@@ -523,6 +523,36 @@ packages:
       - supports-color
     dev: true
 
+  /@wojtekmaj/enzyme-adapter-react-17/0.6.6_fae758709a8810ba97b4c03852dde4d0:
+    resolution: {integrity: sha512-gSfhg8CiL0Vwc2UgUblGVZIy7M0KyXaZsd8+QwzV8TSVRLkGyzdLtYEcs9wRWyQTsdmOd+oRGqbVgUX7AVJxug==}
+    peerDependencies:
+      enzyme: ^3.0.0
+      react: ^17.0.0-0
+      react-dom: ^17.0.0-0
+    dependencies:
+      '@wojtekmaj/enzyme-adapter-utils': 0.1.4_react@17.0.2
+      enzyme: 3.11.0
+      enzyme-shallow-equal: 1.0.4
+      has: 1.0.3
+      prop-types: 15.8.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-is: 17.0.2
+      react-test-renderer: 17.0.2_react@17.0.2
+    dev: true
+
+  /@wojtekmaj/enzyme-adapter-utils/0.1.4_react@17.0.2:
+    resolution: {integrity: sha512-ARGIQSIIv3oBia1m5Ihn1VU0FGmft6KPe39SBKTb8p7LSXO23YI4kNtc4M/cKoIY7P+IYdrZcgMObvedyjoSQA==}
+    peerDependencies:
+      react: ^17.0.0-0
+    dependencies:
+      function.prototype.name: 1.1.5
+      has: 1.0.3
+      object.fromentries: 2.0.5
+      prop-types: 15.8.1
+      react: 17.0.2
+    dev: true
+
   /abab/2.0.5:
     resolution: {integrity: sha512-9IK9EadsbHo6jLWIpxpR6pL0sazTXV6+SQv25ZB+F7Bj9mJNaOc4nCRabwd5M/JwmUa8idz6Eci6eKfJryPs6Q==}
     dev: true
@@ -566,23 +596,6 @@ packages:
       debug: 4.3.3
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /airbnb-prop-types/2.16.0_react@17.0.2:
-    resolution: {integrity: sha512-7WHOFolP/6cS96PhKNrslCLMYAI8yB1Pp6u6XmxozQOiZbsI5ycglZr5cHhBFfuRcQQjzCMith5ZPZdYiJCxUg==}
-    peerDependencies:
-      react: ^0.14 || ^15.0.0 || ^16.0.0-alpha
-    dependencies:
-      array.prototype.find: 2.1.2
-      function.prototype.name: 1.1.5
-      is-regex: 1.1.4
-      object-is: 1.1.5
-      object.assign: 4.1.2
-      object.entries: 1.1.5
-      prop-types: 15.8.1
-      prop-types-exact: 1.2.0
-      react: 17.0.2
-      react-is: 16.13.1
     dev: true
 
   /ansi-regex/5.0.1:
@@ -635,14 +648,6 @@ packages:
       es-abstract: 1.19.1
       es-array-method-boxes-properly: 1.0.0
       is-string: 1.0.7
-    dev: true
-
-  /array.prototype.find/2.1.2:
-    resolution: {integrity: sha512-00S1O4ewO95OmmJW7EesWfQlrCrLEL8kZ40w3+GkLX2yTt0m2ggcePPa2uHPJ9KUmJvwRq+lCV9bD8Yim23x/Q==}
-    dependencies:
-      call-bind: 1.0.2
-      define-properties: 1.1.3
-      es-abstract: 1.19.1
     dev: true
 
   /array.prototype.flat/1.2.5:
@@ -1046,42 +1051,6 @@ packages:
 
   /entities/2.2.0:
     resolution: {integrity: sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==}
-    dev: true
-
-  /enzyme-adapter-react-16/1.15.6_fae758709a8810ba97b4c03852dde4d0:
-    resolution: {integrity: sha512-yFlVJCXh8T+mcQo8M6my9sPgeGzj85HSHi6Apgf1Cvq/7EL/J9+1JoJmJsRxZgyTvPMAqOEpRSu/Ii/ZpyOk0g==}
-    peerDependencies:
-      enzyme: ^3.0.0
-      react: ^16.0.0-0
-      react-dom: ^16.0.0-0
-    dependencies:
-      enzyme: 3.11.0
-      enzyme-adapter-utils: 1.14.0_react@17.0.2
-      enzyme-shallow-equal: 1.0.4
-      has: 1.0.3
-      object.assign: 4.1.2
-      object.values: 1.1.5
-      prop-types: 15.8.1
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-      react-is: 16.13.1
-      react-test-renderer: 16.14.0_react@17.0.2
-      semver: 5.7.1
-    dev: true
-
-  /enzyme-adapter-utils/1.14.0_react@17.0.2:
-    resolution: {integrity: sha512-F/z/7SeLt+reKFcb7597IThpDp0bmzcH1E9Oabqv+o01cID2/YInlqHbFl7HzWBl4h3OdZYedtwNDOmSKkk0bg==}
-    peerDependencies:
-      react: 0.13.x || 0.14.x || ^15.0.0-0 || ^16.0.0-0
-    dependencies:
-      airbnb-prop-types: 2.16.0_react@17.0.2
-      function.prototype.name: 1.1.5
-      has: 1.0.3
-      object.assign: 4.1.2
-      object.fromentries: 2.0.5
-      prop-types: 15.8.1
-      react: 17.0.2
-      semver: 5.7.1
     dev: true
 
   /enzyme-shallow-equal/1.0.4:
@@ -2172,14 +2141,6 @@ packages:
       react-is: 17.0.2
     dev: true
 
-  /prop-types-exact/1.2.0:
-    resolution: {integrity: sha512-K+Tk3Kd9V0odiXFP9fwDHUYRyvK3Nun3GVyPapSIs5OBkITAm15W0CPFD/YKTkMUAbc0b9CUwRQp2ybiBIq+eA==}
-    dependencies:
-      has: 1.0.3
-      object.assign: 4.1.2
-      reflect.ownkeys: 0.2.0
-    dev: true
-
   /prop-types/15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
     dependencies:
@@ -2258,18 +2219,6 @@ packages:
       react-is: 17.0.2
     dev: true
 
-  /react-test-renderer/16.14.0_react@17.0.2:
-    resolution: {integrity: sha512-L8yPjqPE5CZO6rKsKXRO/rVPiaCOy0tQQJbC+UjPNlobl5mad59lvPjwFsQHTvL03caVDIVr9x9/OSgDe6I5Eg==}
-    peerDependencies:
-      react: ^16.14.0
-    dependencies:
-      object-assign: 4.1.1
-      prop-types: 15.8.1
-      react: 17.0.2
-      react-is: 16.13.1
-      scheduler: 0.19.1
-    dev: true
-
   /react-test-renderer/17.0.2_react@17.0.2:
     resolution: {integrity: sha512-yaQ9cB89c17PUb0x6UfWRs7kQCorVdHlutU1boVPEsB8IDZH6n9tHxMacc3y0JoXOJUsZb/t/Mb8FUWMKaM7iQ==}
     peerDependencies:
@@ -2303,10 +2252,6 @@ packages:
     dependencies:
       indent-string: 4.0.0
       strip-indent: 3.0.0
-    dev: true
-
-  /reflect.ownkeys/0.2.0:
-    resolution: {integrity: sha1-dJrO7H8/34tj+SegSAnpDFwLNGA=}
     dev: true
 
   /regenerator-runtime/0.13.9:
@@ -2373,23 +2318,11 @@ packages:
       xmlchars: 2.2.0
     dev: true
 
-  /scheduler/0.19.1:
-    resolution: {integrity: sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==}
-    dependencies:
-      loose-envify: 1.4.0
-      object-assign: 4.1.1
-    dev: true
-
   /scheduler/0.20.2:
     resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
-
-  /semver/5.7.1:
-    resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
-    hasBin: true
-    dev: true
 
   /semver/6.3.0:
     resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
