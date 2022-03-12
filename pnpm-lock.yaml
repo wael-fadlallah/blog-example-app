@@ -13,7 +13,6 @@ specifiers:
   autoprefixer: ^10.4.2
   enzyme: ^3.11.0
   esbuild-darwin-64: ^0.14.25
-  esbuild-linux-64: ^0.14.25
   jsdom: 19.0.0
   jsdom-global: 3.0.2
   postcss: ^8.4.7
@@ -27,7 +26,6 @@ specifiers:
 
 dependencies:
   esbuild-darwin-64: 0.14.25
-  esbuild-linux-64: 0.14.25
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
 
@@ -1199,6 +1197,8 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
+    dev: true
+    optional: true
 
   /esbuild-linux-arm/0.14.25:
     resolution: {integrity: sha512-aTLcE2VBoLydL943REcAcgnDi3bHtmULSXWLbjtBdtykRatJVSxKMjK9YlBXUZC4/YcNQfH7AxwVeQr9fNxPhw==}
