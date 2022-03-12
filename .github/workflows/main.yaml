@@ -38,5 +38,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/deploy-appengine@main
-      with:
-      credentials: ${{ secrets.GCP_SA_KEY }}
+        with:
+          credentials: ${{ secrets.GCP_SA_KEY }}
