@@ -44,14 +44,14 @@ jobs:
             - recursive: true
               args: [--frozen-lockfile, --strict-peer-dependencies]
 
-      - name: Build the project
-        run: pnpm run build
+      # - name: Build the project
+      #   run: pnpm run build
 
-      - name: copy app.yaml file to the build directory
-        run: cp app.yaml dist
+      # - name: copy app.yaml file to the build directory
+      #   run: cp app.yaml dist
 
-      - name: cd to the build directory and deploy the project
-        run: cd dist
+      # - name: cd to the build directory and deploy the project
+      #   run: cd dist
 
       - uses: google-github-actions/deploy-appengine@main
         with:
