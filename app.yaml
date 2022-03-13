@@ -2,13 +2,15 @@ env: standard
 runtime: nodejs16
 handlers:
   - url: /assets
-    static_dir: dist/assets
-  - url: /(.*\.(json|ico|js|css))$
-    static_files: dist/\1
-    upload: dist/.*\.(json|ico|js|css)$
+    static_dir: /assets
+    
+  - url: /assets/(.*\.(json|ico|js|css))$
+    static_files: assets/\1
+    upload: assets/.*\.(json|ico|js|css)$
+
   - url: .*
-    static_files: dist/index.html
-    upload: dist/index.html
+    static_files: index.html
+    upload: index.html
 # handlers:
 #   - url: /
 #     static_files: index.html
