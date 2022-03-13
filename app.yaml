@@ -9,3 +9,12 @@ runtime: nodejs16
 #   - url: .*
 #     static_files: dist/index.html
 #     upload: dist/index.html
+
+handlers:
+  - url: /
+    static_files: index.html
+    upload: index.html
+
+  - url: /(.*)
+    static_files: assets/\1
+    upload: assets/(.*)
