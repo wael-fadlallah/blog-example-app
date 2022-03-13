@@ -55,4 +55,6 @@ jobs:
 
       - uses: google-github-actions/deploy-appengine@main
         with:
+          working_directory: dist
+          version: 20220313t185328
           credentials: ${{ secrets.GCP_SA_KEY }}
