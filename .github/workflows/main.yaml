@@ -53,8 +53,13 @@ jobs:
       - name: cd to the build directory and deploy the project
         run: cd dist
 
+#       - id: "auth"
+      - uses: "google-github-actions/auth@v0"
+        with:
+          credentials_json: "${{ secrets.GCP_SA_KEY }}"
+
+#       - id: "deploy"
       - uses: google-github-actions/deploy-appengine@main
         with:
           working_directory: dist
           version: 20220313t185328
-          credentials: ${{ secrets.GCP_SA_KEY }}
