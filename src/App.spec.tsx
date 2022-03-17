@@ -7,17 +7,9 @@ import "@testing-library/jest-dom/extend-expect";
 
 describe("App Test", () => {
   let wrapper: any;
-  let panel: any;
 
   beforeEach(() => {
     wrapper = shallow(<App />);
-    panel = shallow(
-      <TodoPanel
-        todolist={wrapper.todolist}
-        deleteItem={() => wrapper.deleteItem}
-        checkItem={() => wrapper.checkItem}
-      />
-    );
   });
 
   it("Check if the component is mounted", () => {
