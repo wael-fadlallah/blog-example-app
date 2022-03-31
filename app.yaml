@@ -1,5 +1,6 @@
 env: standard
 runtime: nodejs16
+
 handlers:
   - url: /assets
     static_dir: assets
@@ -10,11 +11,3 @@ handlers:
   - url: .*
     static_files: index.html
     upload: index.html
-# handlers:
-#   - url: /
-#     static_files: index.html
-#     upload: index.html
-
-#   - url: /(.*)
-#     static_files: assets/\1
-#     upload: assets/(.*)

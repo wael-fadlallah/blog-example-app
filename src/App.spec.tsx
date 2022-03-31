@@ -5,7 +5,7 @@ import { shallow } from "enzyme";
 import { render, screen, userEvent, fireEvent } from "./utils/test-utils";
 import "@testing-library/jest-dom/extend-expect";
 
-describe("App Test", () => {
+describe("Test App", () => {
   let wrapper: any;
 
   beforeEach(() => {
